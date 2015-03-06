@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>public method</Title>
+      <Shortcut>method</Shortcut>
+      <Description>Code snippet for a public method</Description>
+      <Author>J.Sakamoto</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessControll</ID>
+          <ToolTip>Replace with the access controll type</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>returnType</ID>
+          <ToolTip>Replace with the type of the method return value</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the method</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessControll$ $returnType$ $name$()
+      {
+          throw new NotImplementedException();
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>virtual method</Title>
+      <Shortcut>vmethod</Shortcut>
+      <Description>Code snippet for a virtual method</Description>
+      <Author>J.Sakamoto</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>accessControll</ID>
+          <ToolTip>Replace with the access controll type</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>returnType</ID>
+          <ToolTip>Replace with the type of the method return value</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the method</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessControll$ virtual $returnType$ $name$()
+        {
+            throw new NotImplementedException();
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>static method</Title>
+      <Shortcut>smethod</Shortcut>
+      <Description>Code snippet for a public static method</Description>
+      <Author>J.Sakamoto</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>returnType</ID>
+          <ToolTip>Replace with the type of the method return value</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the method</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public static $returnType$ $name$()
+      {
+          throw new NotImplementedException();
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>extension method</Title>
+      <Shortcut>xmethod</Shortcut>
+      <Description>Code snippet for a extension method</Description>
+      <Author>J.Sakamoto</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>returnType</ID>
+          <ToolTip>Replace with the type of the method return value</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the method</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+        <Literal>
+          <ID>targetType</ID>
+          <ToolTip>Replace with the name of the extension target type</ToolTip>
+          <Default>object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public static $returnType$ $name$(this $targetType$ value)
+      {
+          throw new NotImplementedException();
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+</CodeSnippets>
+
