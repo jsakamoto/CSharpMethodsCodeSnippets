@@ -1,11 +1,13 @@
-<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Version="1.0.0.3" Id="e2abe71c-24a4-4e59-8cc1-8c7805afe23f" Language="en-US" Publisher="J.Sakamoto" />
+    <Identity Version="1.0.0.5" Id="e2abe71c-24a4-4e59-8cc1-8c7805afe23f" Language="en-US" Publisher="J.Sakamoto" />
     <DisplayName>C# Methods Code Snippets</DisplayName>
     <Description xml:space="preserve">Code snippets for C# methods.</Description>
     <!-- <MoreInfo>https://github.com/jsakamoto/...</MoreInfo> -->
     <!-- <GettingStartedGuide>https://github.com/jsakamoto/...</GettingStartedGuide> -->
     <!-- <ReleaseNotes>https://github.com/jsakamoto/...</ReleaseNotes> -->
+    <!-- <License>https://github.com/jsakamoto/...</License> -->
     <Icon>icon.png</Icon>
     <!-- <PreviewImage>preview.png</PreviewImage> -->
     <Tags>snippet, snippets, code snippets</Tags>
@@ -13,8 +15,10 @@
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,15.0]" />
   </Installation>
-  <Dependencies></Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
   <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="registry.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="registry.pkgdef" />
   </Assets>
 </PackageManifest>

@@ -1,1 +1,5 @@
 *.vsix
+*.suo
+*.user
+bin/
+obj/
