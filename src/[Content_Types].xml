@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+  <Default Extension="dll" ContentType="application/octet-stream" />
+  <Default Extension="txt" ContentType="text/plain" />
+  <Default Extension="pkgdef" ContentType="text/plain" />
+  <Default Extension="xml" ContentType="text/xml" />
+  <Default Extension="vsixmanifest" ContentType="text/xml" />
+  <Default Extension="htm" ContentType="text/html" />
+  <Default Extension="html" ContentType="text/html" />
+  <Default Extension="rtf" ContentType="application/rtf" />
+  <Default Extension="pdf" ContentType="application/pdf" />
+  <Default Extension="jpg" ContentType="image/jpeg" />
+  <Default Extension="jpeg" ContentType="image/jpeg" />
+  <Default Extension="tiff" ContentType="image/tiff" />
+  <Default Extension="vsix" ContentType="application/zip" />
+  <Default Extension="zip" ContentType="application/zip" />
+  <Default Extension="ico" ContentType="application/octet-stream" />
+  <Default Extension="png" ContentType="application/octet-stream" />
+  <Default Extension="psdsor" ContentType="application/vnd.openxmlformats-package.digital-signature-origin" />
+  <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml" />
+  <Default Extension="psdsxs" ContentType="application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml" />
+  <Default Extension="csproj" ContentType="application/octet-stream" />
+  <Default Extension="config" ContentType="application/octet-stream" />
+  <Default Extension="cs" ContentType="application/octet-stream" />
+  <Default Extension="vstemplate" ContentType="application/octet-stream" />
+  <Default Extension="vstman" ContentType="application/octet-stream" />
+  <Default Extension="json" ContentType="application/json" />
+  <Default Extension="snippet" ContentType="application/octet-stream" />
+</Types>
