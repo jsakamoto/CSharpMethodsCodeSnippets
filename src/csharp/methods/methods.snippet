@@ -143,5 +143,79 @@
     </Snippet>
   </CodeSnippet>
 
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>event handler</Title>
+      <Shortcut>eh</Shortcut>
+      <Description>Code snippet for an event handler method</Description>
+      <Author>J.Sakamoto</Author>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the method</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+        <Literal>
+          <ID>eventArgsType</ID>
+          <ToolTip>Replace with the name of the event argument type</ToolTip>
+          <Default>EventArgs</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private void $name$(object sender, $eventArgsType$ e)
+      {
+          throw new NotImplementedException();
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>static event handler</Title>
+      <Shortcut>seh</Shortcut>
+      <Description>Code snippet for an event handler static method</Description>
+      <Author>J.Sakamoto</Author>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the method</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+        <Literal>
+          <ID>eventArgsType</ID>
+          <ToolTip>Replace with the name of the event argument type</ToolTip>
+          <Default>EventArgs</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private static void $name$(object sender, $eventArgsType$ e)
+      {
+          throw new NotImplementedException();
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
 </CodeSnippets>
 
