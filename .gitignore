@@ -1,5 +1,5 @@
-*.vsix
-*.suo
-*.user
-bin/
+.vs/
 obj/
+dist/
+*.user
+*.suo
