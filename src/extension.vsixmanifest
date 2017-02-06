@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Version="1.0.0.10" Id="e2abe71c-24a4-4e59-8cc1-8c7805afe23f" Language="en-US" Publisher="J.Sakamoto" />
+    <Identity Version="1.1.0.0" Id="e2abe71c-24a4-4e59-8cc1-8c7805afe23f" Language="en-US" Publisher="J.Sakamoto" />
     <DisplayName>C# Methods Code Snippets</DisplayName>
     <Description xml:space="preserve">Code snippets for C# methods.</Description>
     <MoreInfo>https://github.com/jsakamoto/CSharpMethodsCodeSnippets</MoreInfo> 
