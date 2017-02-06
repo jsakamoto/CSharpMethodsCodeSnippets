@@ -107,7 +107,7 @@ $zip.AddFile((Convert-Path .\obj\catalog.json), "") > $null
 
 $zip.Save((Join-Path $scriptDir "dist\$vsixFileName.$ver.vsix"))
 #DEBUG: 
-$zip.Save((Join-Path $scriptDir "dist\DEBUG.zip"))
+# $zip.Save((Join-Path $scriptDir "dist\DEBUG.zip"))
 $zip.Dispose()
 
 echo "$vsixFileName.$ver.vsix - Build complete."
