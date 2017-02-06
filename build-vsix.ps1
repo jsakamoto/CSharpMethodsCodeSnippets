@@ -22,6 +22,7 @@ $language = "en-US"
 echo "Creating `"manifest.json`"..."
 $baseDir = (pwd).Path
 $srcFiles = @(ls (Join-Path $baseDir "src\*.*") -Recurse -File | where Name -ne "[Content_Types].xml" |  % { $_.FullName })
+$srcFiles += (Join-Path $baseDir "LICENSE.txt")
 $files = $srcFiles | % {
   @{
     sha256 = (Get-FileHash $_ -Algorithm SHA256).Hash;
@@ -94,6 +95,7 @@ $catalogJson | ConvertTo-Json -Depth 100 -Compress | Out-File "obj\catalog.json"
 # Create .vsix a package with embedding version information.
 echo "Zipping to .VSIX file..."
 $zip = new-object Ionic.Zip.ZipFile
+$zip.AddFile((Convert-Path .\LICENSE.txt), "") > $null
 $zip.AddFile((Convert-Path '.\src\`[Content_Types`].xml'), "") > $null
 $zip.AddFile((Convert-Path .\src\extension.vsixmanifest), "") > $null
 $zip.AddFile((Convert-Path .\src\icon.png), "") > $null

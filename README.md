@@ -143,4 +143,4 @@ private static void MyMethod(object sender, EventArgs e)
 
 ## License
 
-[GNU GPL v.3](LICENSE)
+[GNU GPL v.3](LICENSE.txt)
