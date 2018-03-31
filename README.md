@@ -129,7 +129,7 @@ public static void MyMethod(this object value, object arg1, object arg2, object 
 
 ```csharp
 // Enter "amethod [Tab]", then...  
-public async Task<object> MyMethod()  {
+public async Task<object> MyMethodAsync()  {
     throw new NotImplementedException();
 }
 ```
@@ -138,7 +138,7 @@ public async Task<object> MyMethod()  {
 
 ```csharp
 // Enter "asmethod [Tab]", then...  
-public static async Task<object> MyMethod()  {
+public static async Task<object> MyMethodAsync()  {
     throw new NotImplementedException();
 }
 ```
