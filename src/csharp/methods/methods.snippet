@@ -829,6 +829,98 @@
     </Snippet>
   </CodeSnippet>
 
+  <!-- amethod -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>async method</Title>
+      <Shortcut>amethod</Shortcut>
+      <Description>Code snippet for an async method</Description>
+      <Author>J.Sakamoto</Author>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>accessControll</ID>
+          <ToolTip>Replace with the access controll type</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>returnType</ID>
+          <ToolTip>Replace with the type of the method return value</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the method</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessControll$ async Task<$returnType$> $name$()
+      {
+          throw new NotImplementedException();
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- asmethod -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>async static method</Title>
+      <Shortcut>asmethod</Shortcut>
+      <Description>Code snippet for an async static method</Description>
+      <Author>J.Sakamoto</Author>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>accessControll</ID>
+          <ToolTip>Replace with the access controll type</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>returnType</ID>
+          <ToolTip>Replace with the type of the method return value</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the method</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessControll$ static async Task<$returnType$> $name$()
+      {
+          throw new NotImplementedException();
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
   <!-- eh -->
   <CodeSnippet Format="1.0.0">
     <Header>

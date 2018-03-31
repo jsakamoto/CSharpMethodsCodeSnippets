@@ -24,6 +24,8 @@ After installing of this snippet, you can use following code snippet shortcuts.
     - and "smethod1", "smethod2", "smethod3" are taking arguments edition. 
 - **xmethod** (snippet for extension method)
     - and "xmethod1", "xmethod2", "xmethod3" are taking arguments edition. 
+- **amethod** (snippet for an async instance method)
+- **asmethod** (snippet for an async static method)
 - **eh** (snippet for event handler method)
 - **seh** (snippet for event handler static method)
 
@@ -123,7 +125,25 @@ public static void MyMethod(this object value, object arg1, object arg2, object 
 }
 ```
 
-### ex.5) Event handler, Static event handler
+### ex.5) Async instance method
+
+```csharp
+// Enter "amethod [Tab]", then...  
+public async Task<object> MyMethod()  {
+    throw new NotImplementedException();
+}
+```
+
+### ex.6) Async static method
+
+```csharp
+// Enter "asmethod [Tab]", then...  
+public static async Task<object> MyMethod()  {
+    throw new NotImplementedException();
+}
+```
+
+### ex.7) Event handler, Static event handler
 
 ```csharp
 // Enter "eh [Tab]", then... 
