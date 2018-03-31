@@ -4,8 +4,8 @@ pushd $scriptDir
 $scriptDir = (pwd).Path
 [System.Reflection.Assembly]::LoadFile((Convert-Path "buildTools\Ionic.Zip.dll")) > $null
 
-if( -not (Test-Path "dist")) { md "dist" > $null }
-if( -not (Test-Path "obj")) { md "obj" > $null }
+if ( -not (Test-Path "dist")) { md "dist" > $null }
+if ( -not (Test-Path "obj")) { md "obj" > $null }
 
 # Get version infomation from reading manifest file.
 echo "Retrieving information from manifest file..."
@@ -21,23 +21,25 @@ $language = "en-US"
 # Create "manifest.json".
 echo "Creating `"manifest.json`"..."
 $baseDir = (pwd).Path
-$srcFiles = @(ls (Join-Path $baseDir "src\*.*") -Recurse -File | where Name -ne "[Content_Types].xml" |  % { $_.FullName })
-$srcFiles += (Join-Path $baseDir "LICENSE.txt")
+$srcDir = Join-Path $baseDir "src"
+copy (Join-Path $baseDir "LICENSE.txt") (Join-Path $srcDir "LICENSE.txt")
+$srcFiles = @(ls (Join-Path $srcDir "*.*") -Recurse -File | where Name -ne "[Content_Types].xml" | % { $_.FullName })
 $files = $srcFiles | % {
-  @{
-    sha256 = (Get-FileHash $_ -Algorithm SHA256).Hash;
-    fileName = $_.Substring($baseDir.Length).Replace("\","/");
-  }
+    @{
+        sha256   = (Get-FileHash $_ -Algorithm SHA256).Hash;
+        fileName = $_.Substring($srcDir.Length).Replace("\", "/");
+    }
 }
+del (Join-Path $srcDir "LICENSE.txt")
 
 $manifestJson = [ordered]@{
-    id = $packageId;
-    version = $ver;
-    type =  "Vsix";
-    language = $language;
-    vsixId = $packageId;
+    id           = $packageId;
+    version      = $ver;
+    type         = "Vsix";
+    language     = $language;
+    vsixId       = $packageId;
     extensionDir = $extensionDir;
-    files = $files;
+    files        = $files;
     dependencies = @{
         "Microsoft.VisualStudio.Component.CoreEditor" = "[11.0,16.0)";
     }
@@ -48,43 +50,43 @@ $manifestJson | ConvertTo-Json -Compress | Out-File "obj\manifest.json" -Encodin
 echo "Creating `"catalog.json`"..."
 $catalogJson = [ordered]@{
     manifestVersion = "1.1";
-    info = [ordered]@{
+    info            = [ordered]@{
         id = "$packageId,version=$ver,language=$language";
     };
-    packages= @(
+    packages        = @(
         [ordered]@{
-            id = "Component.$packageId";
-            version = $ver;
-            type =  "Component";
-            language = $language;
-            extension =  $true;
-            dependencies = @{
-                "$packageId" = [ordered]@{
-                    version =  "[$ver]";
+            id                 = "Component.$packageId";
+            version            = $ver;
+            type               = "Component";
+            language           = $language;
+            extension          = $true;
+            dependencies       = @{
+                "$packageId"                                  = [ordered]@{
+                    version  = "[$ver]";
                     language = $language;
                 };
                 "Microsoft.VisualStudio.Component.CoreEditor" = "[11.0,16.0)";
             };
             localizedResources = @(
                 [ordered]@{
-                    language = $language;
-                    title = $displayName;
+                    language    = $language;
+                    title       = $displayName;
                     description = $description;
                 }
             );
         },
         [ordered]@{
-            id = $packageId;
-            version = $ver;
-            type = "Vsix";
-            language = $language;
-            payloads = @(
+            id           = $packageId;
+            version      = $ver;
+            type         = "Vsix";
+            language     = $language;
+            payloads     = @(
                 [ordered]@{
                     fileName = "$vsixFileName.vsix";
                     #size = ?;
                 }
             );
-            vsixId = $packageId;
+            vsixId       = $packageId;
             extensionDir = $extensionDir;
         }
     );
