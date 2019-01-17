@@ -40,9 +40,7 @@ $manifestJson = [ordered]@{
     vsixId       = $packageId;
     extensionDir = $extensionDir;
     files        = $files;
-    dependencies = @{
-        "Microsoft.VisualStudio.Component.CoreEditor" = "[11.0,16.0)";
-    }
+    dependencies = @{}
 }
 $manifestJson | ConvertTo-Json -Compress | Out-File "obj\manifest.json" -Encoding utf8
 
@@ -61,11 +59,10 @@ $catalogJson = [ordered]@{
             language           = $language;
             extension          = $true;
             dependencies       = @{
-                "$packageId"                                  = [ordered]@{
+                "$packageId" = [ordered]@{
                     version  = "[$ver]";
                     language = $language;
                 };
-                "Microsoft.VisualStudio.Component.CoreEditor" = "[11.0,16.0)";
             };
             localizedResources = @(
                 [ordered]@{
