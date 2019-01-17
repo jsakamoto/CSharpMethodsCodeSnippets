@@ -4,6 +4,10 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "label": "build",
             "type": "shell",
             "command": "cmd.exe",
