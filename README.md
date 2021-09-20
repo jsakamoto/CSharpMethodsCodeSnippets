@@ -54,7 +54,23 @@ public void MyMethod(object arg1, object arg2, object arg3)  {
     throw new NotImplementedException();
 }
 ```
-### ex.2) Virtual instance method
+### ex.2) Interface method
+
+```csharp
+// Enter "imethod [Tab]", then...  
+public void MyMethod();
+
+// Enter "imethod1 [Tab]", then...  
+public void MyMethod(object arg);
+
+// Enter "imethod2 [Tab]", then...  
+public void MyMethod(object arg1, object arg2);
+
+// Enter "imethod3 [Tab]", then...  
+public void MyMethod(object arg1, object arg2, object arg3);
+```
+
+### ex.3) Virtual instance method
 
 ```csharp
 // Enter "vmethod [Tab]", then...  
@@ -78,7 +94,7 @@ public virtual void MyMethod(object arg1, object arg2, object arg3)  {
 }
 ```
 
-### ex.3) Static method
+### ex.4) Static method
 
 ```csharp
 // Enter "smethod [Tab]", then...  
@@ -101,7 +117,7 @@ public static void MyMethod(object arg1, object arg2, object arg3)  {
     throw new NotImplementedException();
 }
 ```
-### ex.4) Extension method
+### ex.5) Extension method
 
 ```csharp
 // Enter "xmethod [Tab]", then...  
@@ -125,7 +141,7 @@ public static void MyMethod(this object value, object arg1, object arg2, object 
 }
 ```
 
-### ex.5) Async instance method
+### ex.6) Async instance method
 
 ```csharp
 // Enter "amethod [Tab]", then...  
@@ -134,7 +150,7 @@ public async Task<object> MyMethodAsync()  {
 }
 ```
 
-### ex.6) Async static method
+### ex.7) Async static method
 
 ```csharp
 // Enter "asmethod [Tab]", then...  
@@ -143,7 +159,7 @@ public static async Task<object> MyMethodAsync()  {
 }
 ```
 
-### ex.7) Event handler, Static event handler
+### ex.8) Event handler, Static event handler
 
 ```csharp
 // Enter "eh [Tab]", then... 
