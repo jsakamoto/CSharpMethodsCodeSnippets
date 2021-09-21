@@ -10,7 +10,7 @@ Download "C# Methods Code Snippets" Visual Studio Extension file (.vsix) from [V
 
 You can also install via Visual Studio [Tools] > [Extensions and Updates] dialog (search with keyword "method").
 
-![fig.1](.assets/fig001.png)
+![fig.1](https://raw.githubusercontent.com/jsakamoto/CSharpMethodsCodeSnippets/master/.assets/fig001.png)
 
 ## How to use?
 
@@ -18,6 +18,8 @@ After installing of this snippet, you can use following code snippet shortcuts.
 
 - **method** (snippet for instance method)
     - and "method1", "method2", "method3" are taking arguments edition. 
+- **imethod** (snippet for interface method)
+    - and "imethod1", "imethod2", "imethod3" are taking arguments edition. 
 - **vmethod** (snippet for virtual instance method)
     - and "vmethod1", "vmethod2", "vmethod3" are taking arguments edition. 
 - **smethod** (snippet for static method)
